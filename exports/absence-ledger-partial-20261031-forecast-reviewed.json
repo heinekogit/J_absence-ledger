@@ -1,0 +1,101 @@
+{
+  "export_id": 3,
+  "created_at_utc": "2026-10-31T07:48:16+00:00",
+  "row_count": 54,
+  "sha256": "e0b714b0a93c64e72486b50cbb4de7cbadbd774a7bc546a99cc41e9938fdf713",
+  "pending_count": 1,
+  "forecast_provisional_count": 18,
+  "forecast_provisional_rows": [
+    {
+      "team": "FC東京",
+      "player": "室屋成",
+      "expected_return_date": "26/11/21"
+    },
+    {
+      "team": "今治",
+      "player": "佐藤璃樹",
+      "expected_return_date": "26/11/20"
+    },
+    {
+      "team": "今治",
+      "player": "高木和徹",
+      "expected_return_date": "27/03/19"
+    },
+    {
+      "team": "千葉",
+      "player": "喜田陽",
+      "expected_return_date": "26/11/05"
+    },
+    {
+      "team": "名古屋",
+      "player": "浅野雄也",
+      "expected_return_date": "27/03/11"
+    },
+    {
+      "team": "大分",
+      "player": "ペレイラ",
+      "expected_return_date": "27/04/04"
+    },
+    {
+      "team": "岡山",
+      "player": "田上大地",
+      "expected_return_date": "27/05/29"
+    },
+    {
+      "team": "徳島",
+      "player": "尾上瑠聖",
+      "expected_return_date": "26/11/11"
+    },
+    {
+      "team": "徳島",
+      "player": "稲見哲行",
+      "expected_return_date": "26/11/25"
+    },
+    {
+      "team": "徳島",
+      "player": "高田颯也",
+      "expected_return_date": "27/04/20"
+    },
+    {
+      "team": "札幌",
+      "player": "白井陽斗",
+      "expected_return_date": "26/11/28"
+    },
+    {
+      "team": "水戸",
+      "player": "内野航太郎",
+      "expected_return_date": "26/11/22"
+    },
+    {
+      "team": "水戸",
+      "player": "岡本一真",
+      "expected_return_date": "26/11/08"
+    },
+    {
+      "team": "水戸",
+      "player": "河面旺成",
+      "expected_return_date": "26/11/23"
+    },
+    {
+      "team": "水戸",
+      "player": "渡邉新太",
+      "expected_return_date": "26/12/07"
+    },
+    {
+      "team": "水戸",
+      "player": "鳥海芳樹",
+      "expected_return_date": "26/11/22"
+    },
+    {
+      "team": "Ｇ大阪",
+      "player": "三浦弦太",
+      "expected_return_date": "27/01/23"
+    },
+    {
+      "team": "Ｇ大阪",
+      "player": "植中朝日",
+      "expected_return_date": "26/11/30"
+    }
+  ],
+  "excluded_returned_case": 62
+}

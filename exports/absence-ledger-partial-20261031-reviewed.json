@@ -1,0 +1,126 @@
+{
+  "export_id": 2,
+  "created_at_utc": "2026-10-31T00:44:13+00:00",
+  "csv_file": "absence-ledger-partial-20261031-reviewed.csv",
+  "sha256": "508e1d082579082d27fda87f1b2ecc365fd8fbc33c86956d8a6e1e1dfc06ff13",
+  "row_count": 55,
+  "hold_count": 177,
+  "pending_count": 1,
+  "forecast_review_count": 19,
+  "forecast_review_cases": [
+    {
+      "id": 41,
+      "team": "Ｇ大阪",
+      "player": "三浦弦太",
+      "expected_return_date": "27/01/23"
+    },
+    {
+      "id": 62,
+      "team": "Ｇ大阪",
+      "player": "ウェルトン",
+      "expected_return_date": "26/11/15"
+    },
+    {
+      "id": 82,
+      "team": "Ｇ大阪",
+      "player": "植中朝日",
+      "expected_return_date": "26/11/30"
+    },
+    {
+      "id": 94,
+      "team": "千葉",
+      "player": "喜田陽",
+      "expected_return_date": "26/11/05"
+    },
+    {
+      "id": 104,
+      "team": "徳島",
+      "player": "尾上瑠聖",
+      "expected_return_date": "26/11/11"
+    },
+    {
+      "id": 108,
+      "team": "名古屋",
+      "player": "浅野雄也",
+      "expected_return_date": "27/03/11"
+    },
+    {
+      "id": 120,
+      "team": "今治",
+      "player": "佐藤璃樹",
+      "expected_return_date": "26/11/20"
+    },
+    {
+      "id": 121,
+      "team": "今治",
+      "player": "高木和徹",
+      "expected_return_date": "27/03/19"
+    },
+    {
+      "id": 133,
+      "team": "徳島",
+      "player": "高田颯也",
+      "expected_return_date": "27/04/20"
+    },
+    {
+      "id": 135,
+      "team": "FC東京",
+      "player": "室屋成",
+      "expected_return_date": "26/11/21"
+    },
+    {
+      "id": 140,
+      "team": "水戸",
+      "player": "河面旺成",
+      "expected_return_date": "26/11/23"
+    },
+    {
+      "id": 141,
+      "team": "水戸",
+      "player": "渡邉新太",
+      "expected_return_date": "26/12/07"
+    },
+    {
+      "id": 145,
+      "team": "徳島",
+      "player": "稲見哲行",
+      "expected_return_date": "26/11/25"
+    },
+    {
+      "id": 151,
+      "team": "岡山",
+      "player": "田上大地",
+      "expected_return_date": "27/05/29"
+    },
+    {
+      "id": 152,
+      "team": "札幌",
+      "player": "白井陽斗",
+      "expected_return_date": "26/11/28"
+    },
+    {
+      "id": 154,
+      "team": "大分",
+      "player": "ペレイラ",
+      "expected_return_date": "27/04/04"
+    },
+    {
+      "id": 156,
+      "team": "水戸",
+      "player": "内野航太郎",
+      "expected_return_date": "26/11/22"
+    },
+    {
+      "id": 157,
+      "team": "水戸",
+      "player": "岡本一真",
+      "expected_return_date": "26/11/08"
+    },
+    {
+      "id": 158,
+      "team": "水戸",
+      "player": "鳥海芳樹",
+      "expected_return_date": "26/11/22"
+    }
+  ]
+}

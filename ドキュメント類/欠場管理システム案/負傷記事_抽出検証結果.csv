@@ -1,0 +1,13 @@
+﻿player_name,team,source_url,injury_date_raw,injury_date,diagnosis,team_basis,duration_min,duration_max,duration_unit,duration_state,review_reasons
+知念慶,横浜FM,https://www.f-marinos.com/news/team/10786,10月21日,,右足リスフラン関節損傷,publisher_config,6,8,week,stated,受傷日の年月日が明記されない
+野田裕人,川崎Ｆ,https://www.frontale.co.jp/info/2026/1018_1.html,10月3日,,右腓腹筋肉離れ,publisher_config,,,,not_stated,受傷日の年月日が明記されない／全治の数値なし
+谷口栄斗,川崎Ｆ,https://www.frontale.co.jp/info/2026/1012_2.html,9月28日,,右長内転筋肉離れ,publisher_config,,,,not_stated,受傷日の年月日が明記されない／全治の数値なし
+城定幹大,鳥栖,https://www.sagan-tosu.net/news/p/54758/,2026年10月17日,2026-10-17,右ハムストリング筋損傷,publisher_config,6,8,week,stated,
+松本凪生,鳥栖,https://www.sagan-tosu.net/news/p/54432/,2026年10月8日,2026-10-08,右第5中足骨骨折,publisher_config,3,3,month,stated,
+ノーマンキャンベル,長崎,https://www.v-varen.com/news/248600.html,,,右大腿二頭筋外側頭肉離れ,publisher_config,,,,not_stated,受傷日の年月日が明記されない／全治の数値なし
+遠藤貴成,北九州,https://yokohamafc.com/2026/09/07/takanari-endo/,9月2日,,右膝複合靱帯損傷,loan_statement,,,,pending,受傷日の年月日が明記されない／全治の数値なし
+太田修介,湘南,https://www.bellmare.co.jp/405399/,,,脳震盪,publisher_config,,,,not_stated,受傷日の年月日が明記されない／全治の数値なし
+野田裕人,川崎Ｆ,https://www.jleague.jp/news/article/35153/?navicode=j1,3日,,右腓腹筋肉離れ,article_statement,,,,not_stated,受傷日の年月日が明記されない／全治の数値なし
+堺屋佳介,鳥栖,https://www.sagan-tosu.net/news/p/52723/,7/25,,右膝半月板損傷,publisher_config,2,3,month,stated,受傷日の年月日が明記されない
+坂本亘基,鳥栖,https://www.sagan-tosu.net/news/p/52723/,8/6,,右ハムストリングス損傷,publisher_config,8,10,week,stated,受傷日の年月日が明記されない
+水巻時飛,鳥栖,https://www.sagan-tosu.net/news/p/52723/,,,右半月板損傷,publisher_config,2,3,month,stated,受傷日の年月日が明記されない
