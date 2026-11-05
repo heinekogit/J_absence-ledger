@@ -1068,7 +1068,17 @@ def change_case(c,data):
  if not x: raise ValueError('案件がありません')
  if x['version']!=int(data.get('version',-1)): raise ValueError('案件が別タブで変更されています。再読み込みしてください')
  action=data['action']; before=dict(x); effective=data.get('effective_date',''); reason=data.get('reason','').strip()
- if action in ('return','serve_suspension','exclude','cancel'):
+ if action in ('return','serve_suspension','serve_suspension_date_confirmed','exclude','cancel'):
+  if action=='serve_suspension_date_confirmed':
+   if x['absence_type']!='card':raise ValueError('出場停止案件のみ消化済みにできます')
+   if x['status']!='open':raise ValueError('未終了の出場停止案件を指定してください')
+   if not data.get('checked'):raise ValueError('対象日経過と処分消化を確認してください')
+   try: target=datetime.strptime(x['start_date'],'%y/%m/%d').date()
+   except (ValueError,TypeError):raise ValueError('保存済みの対象日を確認できません')
+   if target>=datetime.now(ZoneInfo('Asia/Tokyo')).date():raise ValueError('対象日を過ぎてから確認してください')
+   if not (x['note'] or x['start_raw']):raise ValueError('保存済みの出場停止情報を確認できません')
+   effective=target.isoformat()
+   reason='保存済みの出場停止情報と対象日経過を利用者が確認: '+(x['note'] or x['start_raw'])
   if not effective or not reason: raise ValueError('有効日と根拠・理由が必要です')
   try: datetime.strptime(effective,'%Y-%m-%d')
   except ValueError: raise ValueError('有効日が実在する日付ではありません')
@@ -1079,7 +1089,7 @@ def change_case(c,data):
    if not data.get('fixture','').strip():raise ValueError('対象試合を入力してください')
   if action=='return' and x['absence_type']=='card':raise ValueError('出場停止案件は消化済み操作を使ってください')
   if action=='return' and not data.get('checked'): raise ValueError('復帰確認のチェックが必要です')
-  status={'return':'returned','serve_suspension':'served','exclude':'excluded','cancel':'cancelled'}[action]
+  status={'return':'returned','serve_suspension':'served','serve_suspension_date_confirmed':'served','exclude':'excluded','cancel':'cancelled'}[action]
  elif action=='reopen':
   if not reason: raise ValueError('確認取消の理由が必要です')
   status='open'

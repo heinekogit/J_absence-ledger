@@ -255,6 +255,28 @@ class LedgerTests(unittest.TestCase):
    with self.assertRaisesRegex(ValueError,'未終了'):app.change_case(c,{**base,'version':2,'fixture':'J1第13節'})
    self.assertEqual(app.change_case(c,{'id':card,'version':2,'action':'reopen','reason':'処分消化の判断を訂正'})['status'],'open')
 
+ def test_card_date_confirmation_uses_saved_notice_without_live_article(self):
+  with app.db() as c:
+   card=c.execute("INSERT INTO cases(team,player,absence_type,start_date,note,status,version,created_at) VALUES('甲府','遠藤 光','card','26/11/03','出場停止: J2(f) / 第15節第1日(11/03)','open',1,?)",(app.now(),)).lastrowid
+   request={'id':card,'version':1,'action':'serve_suspension_date_confirmed','checked':True}
+   with self.assertRaisesRegex(ValueError,'確認'):app.change_case(c,{**request,'checked':False})
+   with patch.object(app,'datetime',wraps=app.datetime) as clock:
+    clock.now.return_value=app.datetime(2026,11,5,tzinfo=app.ZoneInfo('Asia/Tokyo'))
+    result=app.change_case(c,request)
+   self.assertEqual(result['status'],'served')
+   decision=c.execute('SELECT effective_date,reason FROM decisions WHERE case_id=? ORDER BY id DESC',(card,)).fetchone()
+   self.assertEqual(decision['effective_date'],'2026-11-03')
+   self.assertIn('J2(f)',decision['reason'])
+
+ def test_card_date_confirmation_rejects_target_day_and_injury(self):
+  with app.db() as c:
+   card=c.execute("INSERT INTO cases(team,player,absence_type,start_date,note,status,version,created_at) VALUES('甲府','選手A','card','26/11/05','出場停止: J2(f)','open',1,?)",(app.now(),)).lastrowid
+   injury=c.execute("INSERT INTO cases(team,player,absence_type,start_date,note,status,version,created_at) VALUES('甲府','選手B','injury','26/11/03','負傷','open',1,?)",(app.now(),)).lastrowid
+   with patch.object(app,'datetime',wraps=app.datetime) as clock:
+    clock.now.return_value=app.datetime(2026,11,5,tzinfo=app.ZoneInfo('Asia/Tokyo'))
+    with self.assertRaisesRegex(ValueError,'対象日を過ぎて'):app.change_case(c,{'id':card,'version':1,'action':'serve_suspension_date_confirmed','checked':True})
+    with self.assertRaisesRegex(ValueError,'出場停止案件のみ'):app.change_case(c,{'id':injury,'version':1,'action':'serve_suspension_date_confirmed','checked':True})
+
  def test_suspension_matching_existing_card_does_not_create_duplicate(self):
   with app.db() as c:
    article=c.execute("INSERT INTO articles(url,title,source,fetched_at) VALUES('https://www.jleague.jp/news/article/999003/','出場停止','Jリーグ',?)",(app.now(),)).lastrowid

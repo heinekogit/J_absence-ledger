@@ -1,0 +1,73 @@
+アプリの待受先
+127.0.0.1:8765
+
+起動
+python3 app.py
+ を実行する
+
+
+
+
+
+＜Gitコマンドのまとめ＞
+▼gitに新規ファイルをupする -------------------------------
+git init
+git add スクリプト名  　　　 # 例: git add myscript.pl
+git commit -m "新規追加"
+git push
+
+▼git同期中のローカルファイル名をリネーム --------------------
+git mv old_name.php new_name.php
+git commit -m "rename: old_name.php -> new_name.php"
+git push origin main
+
+▼gitに新規に上がったファイルを取り込む ----------------------
+git fetch origin
+git checkout origin/main -- newfile.php
+不特定は、
+git fetch
+git pull
+
+▼ワークスペースを新規git -------------------------------
+（githubでリポジトリを作成しておく）
+git init
+git remote add origin https://github.com/heinekogit/＜リポジトリ名＞.git
+git add .
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
+
+
+▼ローカルにgitからclone -------------------------------
+（コマンドプロンプトでローカルのターゲット階層に移動）
+git clone https://github.com/heinekogit/＜リポジトリ名＞.git
+
+▼ローカルのワークスペースをvscodeで開いた定例確認 -------------
+git fetch origin
+git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
